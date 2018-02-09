@@ -95,21 +95,21 @@ def main():
         aggregate()
         estimate()
         results[i] = error_metric()
-    print(np.mean(results), np.std(results), )
-    print()
+    print np.mean(results), np.std(results), 
+    print
 
 
 def dispatcher():
     global g
     for e in np.arange(0.1, 4.1, 0.1):
 
-        print(e, end=" ")
+        print e, 
         args.epsilon = float(e)
         # try other g
         g = args.projection_range
         # OLH
         g = int(round(math.exp(args.epsilon))) + 1
-        print(g, end=" ")
+        print g, 
         main()
 
 
