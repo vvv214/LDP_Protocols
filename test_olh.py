@@ -2,4 +2,4 @@
 import olh
 
 def test_olh():
-    assert olh.main() == 1
+    assert olh.generate() < 1024
