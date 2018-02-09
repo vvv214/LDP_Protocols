@@ -1,5 +1,5 @@
 # simplest test file, indicating build is success
-import olh
+from olh import generate
 
 def test_olh():
-    assert olh.generate() < 1024
+    assert generate() < 1024
