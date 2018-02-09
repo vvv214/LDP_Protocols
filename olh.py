@@ -28,7 +28,7 @@ def generate():
 def generate_dist():
     global X, REAL_DIST
     X = np.zeros(args.n_user, dtype=np.int)
-    for i in xrange(args.n_user):
+    for i in range(args.n_user):
         X[i] = generate()
         REAL_DIST[X[i]] += 1
 
@@ -50,7 +50,7 @@ def generate_auxiliary():
 def aggregate():
     global Y
     Y = np.zeros(n)
-    for i in xrange(n):
+    for i in range(n):
         v = X[i]
         x = (xxhash.xxh32(str(v), seed=i).intdigest() % g)
         y = x
@@ -69,8 +69,8 @@ def aggregate():
 
 def estimate():
     global ESTIMATE_DIST
-    for i in xrange(n):
-        for v in xrange(domain):
+    for i in range(n):
+        for v in range(domain):
             if Y[i] == (xxhash.xxh32(str(v), seed=i).intdigest() % g):
                 ESTIMATE_DIST[v] += 1
     a = 1.0 * g / (p * g - 1)
@@ -80,7 +80,7 @@ def estimate():
 
 def error_metric():
     abs_error = 0.0
-    for x in xrange(domain):
+    for x in range(domain):
         # print REAL_DIST[x], ESTIMATE_DIST[x]
         abs_error += np.abs(REAL_DIST[x] - ESTIMATE_DIST[x]) ** 2
     return abs_error / domain
@@ -90,25 +90,26 @@ def main():
     generate_auxiliary()
     generate_dist()
     results = np.zeros(args.exp_round)
-    for i in xrange(args.exp_round):
+    for i in range(args.exp_round):
 
         aggregate()
         estimate()
         results[i] = error_metric()
-    print np.mean(results), np.std(results),
-    print
+    print(np.mean(results), np.std(results), )
+    print()
 
 
 def dispatcher():
     global g
     for e in np.arange(0.1, 4.1, 0.1):
-        print e,
+
+        print(e, end=" ")
         args.epsilon = float(e)
         # try other g
         g = args.projection_range
         # OLH
         g = int(round(math.exp(args.epsilon))) + 1
-        print g,
+        print(g, end=" ")
         main()
 
 
