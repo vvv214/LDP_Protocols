@@ -1,2 +1,2 @@
-numpy=
-xxhash=
+numpy=1.11.3
+xxhash=1.0.1
