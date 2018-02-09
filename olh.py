@@ -101,7 +101,7 @@ def main():
 
 def dispatcher():
     global g
-    for e in np.arange(0.1, 4.1, 0.1):
+    for e in np.arange(2.0, 2.1, 0.1):
 
         print e, 
         args.epsilon = float(e)
