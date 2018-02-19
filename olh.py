@@ -69,6 +69,7 @@ def aggregate():
 
 def estimate():
     global ESTIMATE_DIST
+    ESTIMATE_DIST = np.zeros(domain)
     for i in range(n):
         for v in range(domain):
             if Y[i] == (xxhash.xxh32(str(v), seed=i).intdigest() % g):
@@ -91,7 +92,6 @@ def main():
     generate_dist()
     results = np.zeros(args.exp_round)
     for i in range(args.exp_round):
-
         aggregate()
         estimate()
         results[i] = error_metric()
