@@ -2,7 +2,8 @@
 
 # OLH
 Sample OLH implementation in Python
-Paper: Locally Differentially Private Protocols for Frequency Estimation 
+
+Related Paper: Locally Differentially Private Protocols for Frequency Estimation 
 ([link](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-wang-tianhao.pdf))
 
 ## Environment
