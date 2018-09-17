@@ -58,12 +58,9 @@ def aggregate():
         p_sample = np.random.random_sample()
         if p_sample > p:
             # perturb
-            if g == 2:
-                y = 1 - x
-            else:
-                y = np.random.randint(0, g - 2)
-                if y >= x:
-                    y += 1
+            y = np.random.randint(0, g - 1)
+            if y >= x:
+                y += 1
         Y[i] = y
 
 
