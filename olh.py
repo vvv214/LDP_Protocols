@@ -20,7 +20,7 @@ q = 0.0
 
 
 def generate():
-    # uniform distribution. one can use other encoding methods
+    # uniform distribution. one can also use other distributions
     x = np.random.randint(domain)
     return x
 
