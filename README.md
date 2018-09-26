@@ -1,19 +1,21 @@
 [![Build Status](https://travis-ci.org/vvv214/LDP_Protocols.png?branch=master)](https://travis-ci.org/vvv214/LDP_Protocols)
 
-# OLH
+## Protocols
+
+### OLH
 Sample OLH implementation in Python
 
 Related Paper: Locally Differentially Private Protocols for Frequency Estimation 
 ([link](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-wang-tianhao.pdf))
 
-# PEM
-Sample PEM implementation in Python (under construction)
+### PEM (under construction)
+Sample PEM implementation in Python
 
 Related Paper: Locally Differentially Private Heavy Hitter Identification
 ([link](https://arxiv.org/pdf/1708.06674.pdf))
 
-# SVIM
-Sample SVIM implementation in Python (under construction)
+### SVIM (under construction)
+Sample SVIM implementation in Python
 
 Related Paper: Locally Differentially Private Frequent Itemset Mining
 ([link](https://www.computer.org/csdl/proceedings/sp/2018/4353/00/435301a578-abs.html))
