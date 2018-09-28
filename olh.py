@@ -47,7 +47,7 @@ def generate_auxiliary():
     q = 1.0 / (math.exp(epsilon) + args.projection_range - 1)
 
 
-def aggregate():
+def perturb():
     global Y
     Y = np.zeros(n)
     for i in range(n):
@@ -64,7 +64,7 @@ def aggregate():
         Y[i] = y
 
 
-def estimate():
+def aggregate():
     global ESTIMATE_DIST
     ESTIMATE_DIST = np.zeros(domain)
     for i in range(n):
@@ -89,8 +89,8 @@ def main():
     generate_dist()
     results = np.zeros(args.exp_round)
     for i in range(args.exp_round):
+        perturb()
         aggregate()
-        estimate()
         results[i] = error_metric()
     print np.mean(results), np.std(results), 
     print
