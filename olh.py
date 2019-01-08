@@ -56,11 +56,9 @@ def perturb():
         y = x
 
         p_sample = np.random.random_sample()
-        if p_sample > p:
+        if p_sample > p - q:
             # perturb
-            y = np.random.randint(0, g - 1)
-            if y >= x:
-                y += 1
+            y = np.random.randint(0, g)
         Y[i] = y
 
 
