@@ -14,11 +14,19 @@ Sample PEM implementation in Python
 Related Paper: Locally Differentially Private Heavy Hitter Identification
 ([link](https://arxiv.org/pdf/1708.06674.pdf))
 
-### SVIM (under construction)
-Sample SVIM implementation in Python
+### SVIM/SVSM (under construction)
+Sample SVIM/SVSM implementation in Python
 
 Related Paper: Locally Differentially Private Frequent Itemset Mining
 ([link](https://www.computer.org/csdl/proceedings/sp/2018/4353/00/435301a578-abs.html))
+Errata: In Equation (10) of Section V, there are three terms, two of them misses the coefficient $\ell$.
+Clarification: To find top-k itemsets, we also consider singleton estimates from SVIM.
+
+### CALM (under construction)
+Sample CALM implementation in Python
+
+Related Paper: CALM: Consistent Adaptive Local Marginal for Marginal Release under Local Differential Privacy
+([link](https://dl.acm.org/citation.cfm?id=3243742))
 
 
 ## Environment
