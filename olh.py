@@ -43,8 +43,8 @@ def generate_auxiliary():
     REAL_DIST = np.zeros(domain)
     ESTIMATE_DIST = np.zeros(domain)
 
-    p = math.exp(epsilon) / (math.exp(epsilon) + args.projection_range - 1)
-    q = 1.0 / (math.exp(epsilon) + args.projection_range - 1)
+    p = math.exp(epsilon) / (math.exp(epsilon) + g - 1)
+    q = 1.0 / (math.exp(epsilon) + g - 1)
 
 
 def perturb():
