@@ -102,13 +102,13 @@ def dispatcher():
     global g
     for e in np.arange(2.0, 2.1, 0.1):
 
-        print e, 
+        print(e, end=' ')
         args.epsilon = float(e)
         # try other g
         g = args.projection_range
         # OLH
         g = int(round(math.exp(args.epsilon))) + 1
-        print g, 
+        print(g, end=' ')
         main()
 
 
