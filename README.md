@@ -1,4 +1,21 @@
 [![Build Status](https://travis-ci.org/vvv214/LDP_Protocols.png?branch=master)](https://travis-ci.org/vvv214/LDP_Protocols)
+
+## Environment
+Python 3.6
+
+xxhash 1.0.1
+
+numpy 1.11.3
+
+pytest 3.4.0
+
+Or, run
+```
+pip install -r requirements.txt
+pytest
+```
+
+
 ## Protocols
 
 
@@ -9,7 +26,7 @@ Related Paper: Locally Differentially Private Protocols for Frequency Estimation
 ([link](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-wang-tianhao.pdf))
 
 
-### I am slowly cleaning and publishing code for the protocols below:
+### I am slowly cleaning code for the protocols below:
 
 
 ### PEM
@@ -60,19 +77,5 @@ Related Paper: Practical and Robust Privacy Amplification with Multi-Party Diffe
 
 
 
-## Environment
-Python 3.6
-
-xxhash 1.0.1
-
-numpy 1.11.3
-
-pytest 3.4.0
-
-Or, run
-```
-pip install -r requirements.txt
-pytest
-```
 
 
