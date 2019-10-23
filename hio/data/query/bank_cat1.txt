@@ -1,0 +1,6 @@
+select sum(age) from foo where job=services
+select sum(age) from foo where job=student
+select sum(age) from foo where job=retired
+select sum(age) from foo where job=management
+select sum(age) from foo where job=entrepreneur
+select sum(age) from foo where job=self-employed

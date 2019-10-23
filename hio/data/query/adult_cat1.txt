@@ -1,0 +1,6 @@
+select sum(age) from foo where native-country=United-States
+select sum(age) from foo where native-country=India
+select sum(education-num) from foo where native-country=Germany
+select sum(education-num) from foo where native-country=United-States
+select sum(education-num) from foo where native-country=France
+select sum(education-num) from foo where native-country=Japan

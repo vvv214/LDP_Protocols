@@ -1,0 +1,8 @@
+select sum(education-num) from foo where 20<=age<=30 and sex=Male and 10<=hours-per-week<=20
+select sum(education-num) from foo where 21<=age<=31 and native-country=United-States and 20<=hours-per-week<=30
+select sum(education-num) from foo where 20<=age<=25 and sex=Male and native-country=United-States and 30<=hours-per-week<=40
+select sum(education-num) from foo where 20<=age<=40 and 10<=hours-per-week<=40
+select sum(education-num) from foo where 21<=age<=31 and sex=Female and 10<=hours-per-week<=20
+select sum(education-num) from foo where 20<=age<=30 and native-country=China and 20<=hours-per-week<=30
+select sum(education-num) from foo where 40<=age<=80 and native-country=China and 30<=hours-per-week<=40
+select sum(education-num) from foo where 35<=age<=60 and 10<=hours-per-week<=40

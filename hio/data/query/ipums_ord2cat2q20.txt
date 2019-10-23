@@ -1,0 +1,1 @@
+select sum(UHRSWORK) from foo where 0<=INCTOT<=2 and 0<=FTOTINC<=9999999

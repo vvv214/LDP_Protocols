@@ -1,0 +1,8 @@
+select sum(previous) from foo where 20<=age<=30 and 0<=duration<=77 and 0<=campaign<=10 and 4963.6<=nr.employed<=5046.4
+select sum(previous) from foo where 21<=age<=31 and 231<=duration<=1540 and 5<=campaign<=6 and 5046.4<=nr.employed<=5067.1
+select sum(previous) from foo where 20<=age<=25 and 770<=duration<=1540 and 5<=campaign<=10 and 5046.4<=nr.employed<=5129.2
+select sum(previous) from foo where 20<=age<=40 and 462<=duration<=1771 and 0<=campaign<=20 and 4963.6<=nr.employed<=5067.1
+select sum(previous) from foo where 21<=age<=31 and 462<=duration<=4620 and 12<=campaign<=23 and 5058.82<=nr.employed<=5154.04
+select sum(previous) from foo where 20<=age<=30 and 770<=duration<=4620 and 30<=campaign<=50 and 4963.6<=nr.employed<=5154.04
+select sum(previous) from foo where 40<=age<=80 and 0<=duration<=4620 and 20<=campaign<=60 and 4963.6<=nr.employed<=4967.74
+select sum(previous) from foo where 35<=age<=60 and 0<=duration<=4620 and 10<=campaign<=15 and 4963.6<=nr.employed<=5129.2

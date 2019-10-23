@@ -1,0 +1,8 @@
+select sum(education-num) from foo where 20<=capital-gain<=30 and 10<=capital-loss<=20
+select sum(education-num) from foo where 211<=capital-gain<=351 and 210<=capital-loss<=300
+select sum(education-num) from foo where 290<=capital-gain<=525 and 30<=capital-loss<=400
+select sum(education-num) from foo where 210<=capital-gain<=540 and 10<=capital-loss<=450
+select sum(education-num) from foo where 210<=capital-gain<=351 and 106<=capital-loss<=209
+select sum(education-num) from foo where 20<=capital-gain<=130 and 250<=capital-loss<=830
+select sum(education-num) from foo where 407<=capital-gain<=860 and 310<=capital-loss<=740
+select sum(education-num) from foo where 350<=capital-gain<=650 and 10<=capital-loss<=40

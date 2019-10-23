@@ -1,0 +1,6 @@
+select sum(previous) from foo where 24<=age<=40
+select sum(previous) from foo where 18<=age<=30
+select sum(campaign) from foo where 20<=age<=27
+select sum(campaign) from foo where 20<=age<=30
+select sum(previous) from foo where 30<=age<=40
+select sum(previous) from foo where 20<=age<=40

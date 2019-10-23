@@ -1,0 +1,8 @@
+select sum(education-num) from foo where 20<=age<=30 and 10<=capital-gain<=20
+select sum(education-num) from foo where 21<=age<=31 and 210<=capital-gain<=300
+select sum(education-num) from foo where 20<=age<=25 and 30<=capital-gain<=400
+select sum(education-num) from foo where 20<=age<=40 and 10<=capital-gain<=450
+select sum(education-num) from foo where 21<=age<=31 and 106<=capital-gain<=209
+select sum(education-num) from foo where 20<=age<=30 and 250<=capital-gain<=830
+select sum(education-num) from foo where 40<=age<=80 and 310<=capital-gain<=740
+select sum(education-num) from foo where 35<=age<=60 and 10<=capital-gain<=40

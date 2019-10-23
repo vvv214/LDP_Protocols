@@ -1,0 +1,8 @@
+select sum(previous) from foo where 20<=age<=30 and education=illiterate and 231<=duration<=1540
+select sum(previous) from foo where 21<=age<=31 and job=student and 770<=duration<=1540
+select sum(previous) from foo where 20<=age<=25 and education=university.degree and job=management and 462<=duration<=1771
+select sum(previous) from foo where 20<=age<=40 and 231<=duration<=1540
+select sum(previous) from foo where 21<=age<=31 and education=basic.9y and 770<=duration<=1540
+select sum(previous) from foo where 20<=age<=30 and job=retired and 462<=duration<=1771
+select sum(previous) from foo where 40<=age<=80 and job=technician and 770<=duration<=4620
+select sum(previous) from foo where 35<=age<=60 and 770<=duration<=4620

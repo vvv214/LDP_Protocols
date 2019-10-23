@@ -1,0 +1,2 @@
+select sum(education-num) from foo where 24<=hours-per-week<=40
+select sum(education-num) from foo where 1<=hours-per-week<=10

@@ -1,21 +1,4 @@
 [![Build Status](https://travis-ci.org/vvv214/LDP_Protocols.png?branch=master)](https://travis-ci.org/vvv214/LDP_Protocols)
-
-## Environment
-Python 2.7.10 (can also work for Python 3 by chaning the print statements)
-
-xxhash 1.0.1
-
-numpy 1.11.3
-
-pytest 3.4.0
-
-Or, run
-```
-pip install -r requirements.txt
-pytest
-```
-
-
 ## Protocols
 
 
@@ -35,6 +18,10 @@ Heavy Hitter Identification
 Related Paper: Locally Differentially Private Heavy Hitter Identification
 ([link](https://arxiv.org/pdf/1708.06674.pdf))
 
+Errata: For the AOL dataset, there are 0.12M, instead of 0.2M unique queries.  This is a typo that does not change any result.
+
+Clarification: For the QUANTCAST data, I downloaded the data for one month (which contains 10 billion clicks), and sample for 5min (i.e., divide the # clicks by 30 * 24 * 5 * 60).  The dataset is available upon request.
+
 
 ### SVIM/SVSM
 Frequent Itemset Mining
@@ -47,8 +34,12 @@ Errata: In Equation (10) of Section V, there are three terms, two of them misses
 Clarification: To find top-k itemsets, we also consider singleton estimates from SVIM.
 
 
-<!--- ### CALM (under construction) Marginal Estimation Related Paper: CALM: Consistent Adaptive Local Marginal for Marginal Release under Local Differential Privacy ([link](https://dl.acm.org/citation.cfm?id=3243742)) --->
-<!--- ###HIO (under construction) Multi-Dimensional Analytics Related Paper: Answering Multi-Dimensional Analytical Queries under Local Differential Privacy ([link](https://dl.acm.org/citation.cfm?id=3319891)) --->
+### HIO 
+Multi-Dimensional Analytics 
+
+Related Paper: Multi-Dimensional Analytics Related Paper: Answering Multi-Dimensional Analytical Queries under Local Differential Privacy ([link](https://dl.acm.org/citation.cfm?id=3319891)) 
+
+
 <!--- ### Norm-Hyb Post-Porcessing Related Paper: Consistent and Accurate Frequency Oracles under Local Differential Privacy ([link](https://arxiv.org/pdf/1905.08320.pdf)) --->
 
 
@@ -66,5 +57,22 @@ Shuffler Model
 
 Related Paper: Practical and Robust Privacy Amplification with Multi-Party Differential Privacy
 ([link](https://arxiv.org/pdf/1908.11515.pdf))
+
+
+
+## Environment
+Python 3.6
+
+xxhash 1.0.1
+
+numpy 1.11.3
+
+pytest 3.4.0
+
+Or, run
+```
+pip install -r requirements.txt
+pytest
+```
 
 

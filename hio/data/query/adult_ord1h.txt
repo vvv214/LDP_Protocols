@@ -1,0 +1,2 @@
+select sum(education-num) from foo where 4<=capital-gain<=808
+select sum(education-num) from foo where 102<=capital-gain<=907

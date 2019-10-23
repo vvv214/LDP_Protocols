@@ -1,0 +1,8 @@
+select sum(education-num) from foo where 20<=age<=30 and 0<=capital-gain<=5 and 0<=capital-loss<=10 and 10<=hours-per-week<=20
+select sum(education-num) from foo where 21<=age<=31 and 0<=capital-gain<=3 and 50<=capital-loss<=60 and 20<=hours-per-week<=30
+select sum(education-num) from foo where 20<=age<=25 and 10<=capital-gain<=20 and 0<=capital-loss<=10 and 30<=hours-per-week<=40
+select sum(education-num) from foo where 20<=age<=40 and 50<=capital-gain<=60 and 0<=capital-loss<=1 and 10<=hours-per-week<=40
+select sum(education-num) from foo where 21<=age<=31 and 30<=capital-gain<=31 and 5<=capital-loss<=6 and 10<=hours-per-week<=20
+select sum(education-num) from foo where 20<=age<=30 and 0<=capital-gain<=1 and 0<=capital-loss<=1 and 20<=hours-per-week<=30
+select sum(education-num) from foo where 40<=age<=80 and 0<=capital-gain<=10 and 0<=capital-loss<=1 and 30<=hours-per-week<=40
+select sum(education-num) from foo where 35<=age<=60 and 0<=capital-gain<=10 and 0<=capital-loss<=1 and 10<=hours-per-week<=40

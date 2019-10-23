@@ -1,0 +1,8 @@
+select sum(previous) from foo where 20<=duration<=130 and 0<=nr.employed<=77
+select sum(previous) from foo where 211<=duration<=231 and 0<=nr.employed<=77
+select sum(previous) from foo where 202<=duration<=254 and 1<=nr.employed<=17
+select sum(previous) from foo where 20<=duration<=140 and 170<=nr.employed<=200
+select sum(previous) from foo where 21<=duration<=131 and 18<=nr.employed<=64
+select sum(previous) from foo where 20<=duration<=230 and 41<=nr.employed<=184
+select sum(previous) from foo where 4<=duration<=180 and 156<=nr.employed<=241
+select sum(previous) from foo where 135<=duration<=160 and 0<=nr.employed<=18

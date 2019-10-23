@@ -1,0 +1,6 @@
+select sum(previous) from foo where 249<=duration<=940
+select sum(previous) from foo where 18<=duration<=830
+select sum(campaign) from foo where 120<=duration<=927
+select sum(campaign) from foo where 120<=duration<=630
+select sum(previous) from foo where 310<=duration<=970
+select sum(previous) from foo where 230<=duration<=1000

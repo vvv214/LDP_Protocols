@@ -1,0 +1,8 @@
+select sum(previous) from foo where 20<=age<=30 and 0<=duration<=77
+select sum(previous) from foo where 21<=age<=31 and 0<=duration<=77
+select sum(previous) from foo where 20<=age<=25 and 1<=duration<=17
+select sum(previous) from foo where 20<=age<=40 and 770<=duration<=1000
+select sum(previous) from foo where 21<=age<=31 and 18<=duration<=64
+select sum(previous) from foo where 20<=age<=30 and 541<=duration<=684
+select sum(previous) from foo where 40<=age<=80 and 256<=duration<=741
+select sum(previous) from foo where 35<=age<=60 and 0<=duration<=18

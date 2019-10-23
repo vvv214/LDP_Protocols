@@ -1,0 +1,1 @@
+select sum(UHRSWORK) from foo where 24<=AGE<=40 and 0<=INCTOT<=2
