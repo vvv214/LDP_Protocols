@@ -6,15 +6,14 @@ import numpy as np
 
 class Data(object):
 
-    def __init__(self, args):
-        self.args = args
+    def __init__(self, dataname, limit):
         self.data = None
         self.dict_size = 42178
         user_total = 990002
         random_map = np.arange(user_total)
         np.random.shuffle(random_map)
         overall_count = 0
-        user_file_name = 'kosarak-data/kosarak'
+        user_file_name = '%s-data/%s' % (dataname, dataname)
         if not path.exists(user_file_name + '.pkl'):
             data = [0] * user_total
             f = open(user_file_name + '.dat', 'r')
@@ -35,6 +34,8 @@ class Data(object):
                     break
             pickle.dump(data, open(user_file_name + '.pkl', 'wb'))
         self.data = pickle.load(open(user_file_name + '.pkl', 'rb'))
+        # only use part of the data to get results quickly
+        self.data = self.data[:limit]
 
     # ===== singleton testing methods
     def test_single(self, low, high):

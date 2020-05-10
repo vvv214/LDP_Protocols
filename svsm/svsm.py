@@ -7,9 +7,10 @@ import fo
 
 
 class SVSM():
-    def __init__(self, args, data):
+    def __init__(self, data, top_k, epsilon):
         self.data = data
-        self.args = args
+        self.top_k = top_k
+        self.epsilon = epsilon
 
     def find(self):
         n = len(self.data.data)
@@ -27,8 +28,8 @@ class SVSM():
 
         # step 1: find singleton candidate set
         true_singleton_dist = self.data.test_single(0, phase1_user)
-        est_singleton_dist = fo.lh(true_singleton_dist, self.args.epsilon)
-        top_singleton = 2 * self.args.top_k
+        est_singleton_dist = fo.lh(true_singleton_dist, self.epsilon)
+        top_singleton = 2 * self.top_k
         singleton_list, value_result = self.build_result(est_singleton_dist, range(len(est_singleton_dist)),
                                                          top_singleton)
 
@@ -53,7 +54,7 @@ class SVSM():
             value_estimates = fo.lh(true_singleton_dist, eps)[:-1]
         value_estimates *= single_test_user / length_percentile / (phase3_user - phase2_user)
 
-        top_singleton = self.args.top_k
+        top_singleton = self.top_k
         key_list, est_freq = self.build_result(value_estimates, singleton_list, top_singleton)
         return key_list, est_freq
 
@@ -107,16 +108,16 @@ class SVSM():
         return i
 
     def set_grr(self, new_cand_dict, length_limit):
-        eps = self.args.epsilon
+        eps = self.epsilon
         use_grr = False
-        if len(new_cand_dict) < length_limit * math.exp(self.args.epsilon) * (4 * length_limit - 1) + 1:
-            eps = math.log(length_limit * (math.exp(self.args.epsilon) - 1) + 1)
+        if len(new_cand_dict) < length_limit * math.exp(self.epsilon) * (4 * length_limit - 1) + 1:
+            eps = math.log(length_limit * (math.exp(self.epsilon) - 1) + 1)
             use_grr = True
         return use_grr, eps
 
     def test_length_singleton(self, user_start, user_end, length_limit, cand_dict):
         true_length_dist = self.data.test_length_cand(user_start, user_end, cand_dict, length_limit)
-        est_length_dist = fo.lh(true_length_dist, self.args.epsilon)
+        est_length_dist = fo.lh(true_length_dist, self.epsilon)
         return est_length_dist
 
     # ===== auxiliary functions for itemset: constructing candidate set
@@ -138,7 +139,7 @@ class SVSM():
         sorted_indices = np.argsort(cand_value)
         new_cand_dict = {}
         new_cand_inv = []
-        for j in sorted_indices[-self.args.top_k:]:
+        for j in sorted_indices[-self.top_k:]:
             new_cand_dict[cand_list[j]] = len(new_cand_inv)
             new_cand_inv.append(tuple(cand_list[j]))
         return new_cand_dict, new_cand_inv
@@ -178,7 +179,7 @@ class SVSM():
 
     def test_length_itemset(self, user_start, user_end, length_limit, cand_dict):
         true_length_dist = self.data.test_length_itemset(user_start, user_end, cand_dict, length_limit)
-        est_length_dist = fo.lh(true_length_dist, self.args.epsilon)
+        est_length_dist = fo.lh(true_length_dist, self.epsilon)
         return est_length_dist
 
     def update_tail_with_reporting_set(self, length_limit, length_distribution_set, key_result, value_result):
@@ -198,7 +199,7 @@ class SVSM():
         current_estimates = np.concatenate((singleton_freq, set_freq), axis=0)
         results = {}
         sorted_indices = np.argsort(current_estimates)
-        for j in sorted_indices[-self.args.top_k:]:
+        for j in sorted_indices[-self.top_k:]:
             if j < len(singletons_keys):
                 results[tuple([singletons_keys[j]])] = singleton_freq[j]
             else:

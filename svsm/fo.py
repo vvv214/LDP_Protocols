@@ -9,7 +9,7 @@ def lh(real_dist, eps):
     domain = len(real_dist)
 
     noisy_samples = lh_perturb(real_dist, g, p)
-    est_dist = lh_aggregate(domain, noisy_samples, g, p, q)
+    est_dist = lh_aggregate(noisy_samples, domain, g, p, q)
 
     return est_dist
 
@@ -21,9 +21,9 @@ def lh_perturb(real_dist, g, p):
     seeds = np.random.randint(0, n, n)
 
     counter = 0
-    for v in real_dist:
-        for i in range(v):
-            y = x = xxhash.xxh32(str(int(real_dist[i])), seed=seeds[counter]).intdigest() % g
+    for k, v in enumerate(real_dist):
+        for _ in range(v):
+            y = x = xxhash.xxh32(str(int(k)), seed=seeds[counter]).intdigest() % g
 
             if samples_one[counter] > p:
                 y = np.random.randint(0, g - 1)
@@ -34,7 +34,7 @@ def lh_perturb(real_dist, g, p):
     return noisy_samples
 
 
-def lh_aggregate(domain, noisy_samples, g, p, q):
+def lh_aggregate(noisy_samples, domain, g, p, q):
     n = len(noisy_samples)
 
     est = np.zeros(domain, dtype=np.int32)
@@ -59,7 +59,7 @@ def rr(real_dist, eps):
     q = 1 / (ee + domain - 1)
 
     noisy_samples = rr_perturb(real_dist, domain, p)
-    est_dist = rr_aggregate(domain, noisy_samples, p, q)
+    est_dist = rr_aggregate(noisy_samples, domain, p, q)
 
     return est_dist
 
@@ -67,19 +67,22 @@ def rr(real_dist, eps):
 def rr_perturb(real_dist, domain, p):
     n = sum(real_dist)
     perturbed_datas = np.zeros(n, dtype=np.int)
-    for i in range(n):
-        y = x = real_dist[i]
-        p_sample = np.random.random_sample()
+    counter = 0
+    for k, v in enumerate(real_dist):
+        for _ in range(v):
+            y = x = k
+            p_sample = np.random.random_sample()
 
-        if p_sample > p:
-            y = np.random.randint(0, domain - 1)
-            if y >= x:
-                y += 1
-        perturbed_datas[i] = y
+            if p_sample > p:
+                y = np.random.randint(0, domain - 1)
+                if y >= x:
+                    y += 1
+            perturbed_datas[counter] = y
+            counter += 1
     return perturbed_datas
 
 
-def rr_aggregate(domain, noisy_samples, p, q):
+def rr_aggregate(noisy_samples, domain, p, q):
     n = len(noisy_samples)
 
     est = np.zeros(domain)
