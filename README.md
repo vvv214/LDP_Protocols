@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/vvv214/LDP_Protocols.png?branch=master)](https://travis-ci.org/vvv214/LDP_Protocols)
-
 ## Environment
 Python 3.6
 
@@ -26,6 +24,30 @@ Related Paper: Locally Differentially Private Protocols for Frequency Estimation
 ([link](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-wang-tianhao.pdf))
 
 
+### Square Wave
+Density Oracle (for numerical/ordinal values)
+
+Related Paper: Estimating Numerical Distributions under Local Differential Privacy
+([link](https://arxiv.org/pdf/1912.01051))
+
+
+### SVSM
+Frequent Itemset Mining under LDP
+
+Related Paper: Locally Differentially Private Frequent Itemset Mining
+([link](https://ieeexplore.ieee.org/document/8418600))
+
+Errata: In Equation (10) of Section V, there are three terms, two of them misses the coefficient $\ell$.
+
+Clarification: To find top-k itemsets, we also consider singleton estimates from SVIM (the method for singleton mining).
+
+
+### Post-Porcessing
+A list of Post-Porcess Methods for LDP
+Related Paper: Locally Differentially Private Frequency Estimation with Consistency
+([link](https://www.ndss-symposium.org/wp-content/uploads/2020/02/24157.pdf))
+
+
 ### I am slowly cleaning code for the protocols below:
 
 
@@ -40,24 +62,10 @@ Errata: For the AOL dataset, there are 0.12M, instead of 0.2M unique queries.  T
 Clarification: For the QUANTCAST data, I downloaded the data for one month (which contains 10 billion clicks), and sample for 5min (i.e., divide the # clicks by 30 * 24 * 5 * 60).  The dataset is available upon request.
 
 
-### SVIM/SVSM
-Frequent Itemset Mining
-
-Related Paper: Locally Differentially Private Frequent Itemset Mining
-([link](https://ieeexplore.ieee.org/document/8418600))
-
-Errata: In Equation (10) of Section V, there are three terms, two of them misses the coefficient $\ell$.
-
-Clarification: To find top-k itemsets, we also consider singleton estimates from SVIM.
-
-
 ### HIO 
 Multi-Dimensional Analytics 
 
 Related Paper: Multi-Dimensional Analytics Related Paper: Answering Multi-Dimensional Analytical Queries under Local Differential Privacy ([link](https://dl.acm.org/citation.cfm?id=3319891)) 
-
-
-<!--- ### Norm-Hyb Post-Porcessing Related Paper: Consistent and Accurate Frequency Oracles under Local Differential Privacy ([link](https://arxiv.org/pdf/1905.08320.pdf)) --->
 
 
 ### CALM
