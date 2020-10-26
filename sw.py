@@ -59,12 +59,13 @@ def sw(ori_samples, l, h, eps, randomized_bins=1024, domain_bins=1024):
                 transform[rr_bound, i] = (r_p - q * m_cell) * (rr_v - (rr_bound * m_cell - w / 2)) / n_cell * 0.5 + q * m_cell
 
             transform[rr_bound - 1, i] = p * m_cell - (p * m_cell - l_p) * ((rr_bound * m_cell - w / 2) - lr_v) / n_cell * 0.5
-
-            if rr_bound - 1 > ll_bound + 2:
-                transform[ll_bound + 2: rr_bound - 1, i] = p * m_cell
+			
         else:
             transform[rr_bound, i] = (l_p + r_p) / 2
             transform[rr_bound - 1, i] = p * m_cell
+
+		if rr_bound - 1 > ll_bound + 2:
+			transform[ll_bound + 2: rr_bound - 1, i] = p * m_cell
 
     max_iteration = 10000
     loglikelihood_threshold = 1e-3
