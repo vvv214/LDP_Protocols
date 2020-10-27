@@ -20,22 +20,20 @@ pytest
 ### OLH
 Frequency Oracle
 
-Related Paper: Locally Differentially Private Protocols for Frequency Estimation 
-([link](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-wang-tianhao.pdf))
+Related Paper: [Locally Differentially Private Protocols for Frequency Estimation](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-wang-tianhao.pdf)
 
 
 ### Square Wave
 Density Oracle (for numerical/ordinal values)
 
-Related Paper: Estimating Numerical Distributions under Local Differential Privacy
-([link](https://arxiv.org/pdf/1912.01051))
+Related Paper: [Estimating Numerical Distributions under Local Differential Privacy](https://arxiv.org/pdf/1912.01051)
 
+Clarification: Citation 33 should be Ning Wang et al. Collecting and Analyzing Multidimensional Data with Local Differential Privacy. ICDE 2019.
 
 ### SVSM
 Frequent Itemset Mining under LDP
 
-Related Paper: Locally Differentially Private Frequent Itemset Mining
-([link](https://ieeexplore.ieee.org/document/8418600))
+Related Paper: [Locally Differentially Private Frequent Itemset Mining](https://ieeexplore.ieee.org/document/8418600)
 
 Errata: In Equation (10) of Section V, there are three terms, two of them misses the coefficient $\ell$.
 
@@ -44,8 +42,7 @@ Clarification: To find top-k itemsets, we also consider singleton estimates from
 
 ### Post-Porcessing
 A list of Post-Porcess Methods for LDP
-Related Paper: Locally Differentially Private Frequency Estimation with Consistency
-([link](https://www.ndss-symposium.org/wp-content/uploads/2020/02/24157.pdf))
+Related Paper: [Locally Differentially Private Frequency Estimation with Consistency](https://www.ndss-symposium.org/wp-content/uploads/2020/02/24157.pdf)
 
 
 ### I am slowly cleaning code for the protocols below:
@@ -54,8 +51,7 @@ Related Paper: Locally Differentially Private Frequency Estimation with Consiste
 ### PEM
 Heavy Hitter Identification
 
-Related Paper: Locally Differentially Private Heavy Hitter Identification
-([link](https://arxiv.org/pdf/1708.06674.pdf))
+Related Paper: [Locally Differentially Private Heavy Hitter Identification](https://arxiv.org/pdf/1708.06674.pdf)
 
 Errata: For the AOL dataset, there are 0.12M, instead of 0.2M unique queries.  This is a typo that does not change any result.
 
@@ -65,7 +61,7 @@ Clarification: For the QUANTCAST data, I downloaded the data for one month (whic
 ### HIO 
 Multi-Dimensional Analytics 
 
-Related Paper: Multi-Dimensional Analytics Related Paper: Answering Multi-Dimensional Analytical Queries under Local Differential Privacy ([link](https://dl.acm.org/citation.cfm?id=3319891)) 
+Related Paper: [Multi-Dimensional Analytics Related Paper: Answering Multi-Dimensional Analytical Queries under Local Differential Privacy](https://dl.acm.org/citation.cfm?id=3319891)
 
 
 ### CALM
@@ -80,8 +76,7 @@ Related Paper: CALM: Consistent Adaptive Local Marginal for Marginal Release und
 ### MURS
 Shuffler Model
 
-Related Paper: Practical and Robust Privacy Amplification with Multi-Party Differential Privacy
-([link](https://arxiv.org/pdf/1908.11515.pdf))
+Related Paper: [Improving Utility and Security of the Shuffler-based Differential Privacy](http://www.vldb.org/pvldb/vol13/p3545-wang.pdf)
 
 
 
