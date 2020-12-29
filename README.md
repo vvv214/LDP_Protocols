@@ -1,24 +1,12 @@
-## Environment
-Python 3.6
+This repository lists the prototype algorithms our group developed for data collection/analysis under local differential privacy.  
 
-xxhash 1.0.1
-
-numpy 1.11.3
-
-pytest 3.4.0
-
-Or, run
-```
-pip install -r requirements.txt
-pytest
-```
 
 
 ## Protocols
 
 
 ### OLH
-Frequency Oracle
+Frequency Oracle (primitive to estimate the histograms)
 
 Related Paper: [Locally Differentially Private Protocols for Frequency Estimation](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-wang-tianhao.pdf)
 
@@ -70,7 +58,7 @@ Marginal Estimation
 The source code is not opened yet, but the similar code (plus a data synthesizing component) for the central DP setting is opened at [DPSyn](https://github.com/usnistgov/PrivacyEngCollabSpace/tree/master/tools/de-identification/Differential-Privacy-Synthetic-Data-Challenge-Algorithms/DPSyn) by [@Zhangzhk0819](https://github.com/Zhangzhk0819) (related info at [nist challenge 1](
 https://www.nist.gov/communications-technology-laboratory/pscr/funding-opportunities/open-innovation-prize-challenges-2) and [nist challenge 2](https://www.nist.gov/communications-technology-laboratory/pscr/funding-opportunities/open-innovation-prize-challenges-1)).
 
-Related Paper: CALM: Consistent Adaptive Local Marginal for Marginal Release under Local Differential Privacy ([link](https://dl.acm.org/citation.cfm?id=3243742))
+Related Paper: [CALM: Consistent Adaptive Local Marginal for Marginal Release under Local Differential Privacy](https://dl.acm.org/citation.cfm?id=3243742)
 
 
 ### MURS
@@ -79,6 +67,21 @@ Shuffler Model
 Related Paper: [Improving Utility and Security of the Shuffler-based Differential Privacy](http://www.vldb.org/pvldb/vol13/p3545-wang.pdf)
 
 
+## Environment
+I mainly used Python 3 with numpy.  Although not tested, the code should be compatible with any recent version.  I also use a special package called xxhash for high hashing throughput.  It can be changed to the builtin hash function.  In case your local environment does not work, this is the package versions I used from my local side.
 
+Python 3.6
+
+xxhash 1.0.1
+
+numpy 1.11.3
+
+pytest 3.4.0
+
+Or, run
+```
+pip install -r requirements.txt
+pytest
+```
 
 
