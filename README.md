@@ -30,13 +30,16 @@ Clarification: To find top-k itemsets, we also consider singleton estimates from
 
 ### Post-Porcessing
 A list of Post-Porcess Methods for LDP
+
 Related Paper: [Locally Differentially Private Frequency Estimation with Consistency](https://www.ndss-symposium.org/wp-content/uploads/2020/02/24157.pdf)
 
 
 
 ### HDG
 Multi-Dimensional Range Query under LDP
+
 Related Paper: [Answering Multi-Dimensional Range Queries under Local Differential Privacy](https://arxiv.org/pdf/2009.06538.pdf)
+
 Code available at [this repository](https://github.com/YangJianyu-bupt/privmdr).
 
 ### I am slowly cleaning code for the protocols below:
