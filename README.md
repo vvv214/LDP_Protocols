@@ -1,4 +1,4 @@
-This repository lists the prototype algorithms our group developed for data collection/analysis under local differential privacy.  
+This repository lists the prototype algorithms our group developed for data collection/analysis under local differential privacy and is maintained by [Tianhao Wang](https://tianhao.wang/).  
 
 
 
