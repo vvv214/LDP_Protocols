@@ -13,6 +13,7 @@ Related Paper: [Locally Differentially Private Protocols for Frequency Estimatio
 ### Extended-OLH for Sparse Aggregation
 
 Related Paper: [Locally Differentially Private Sparse Vector Aggregation](https://ieeexplore.ieee.org/abstract/document/9833635)
+
 Source code is to be open sourced.
 
 
