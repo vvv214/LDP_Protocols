@@ -10,6 +10,11 @@ Frequency Oracle (primitive to estimate the histograms)
 
 Related Paper: [Locally Differentially Private Protocols for Frequency Estimation](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-wang-tianhao.pdf)
 
+### Extended-OLH for Sparse Aggregation
+
+Related Paper: [Locally Differentially Private Sparse Vector Aggregation](https://ieeexplore.ieee.org/abstract/document/9833635)
+Source code is to be open sourced.
+
 
 ### Square Wave
 Density Oracle (for numerical/ordinal values)
@@ -33,6 +38,14 @@ A list of Post-Porcess Methods for LDP
 
 Related Paper: [Locally Differentially Private Frequency Estimation with Consistency](https://www.ndss-symposium.org/wp-content/uploads/2020/02/24157.pdf)
 
+
+### ToPL
+Publish streaming data under LDP
+
+Related Paper: [Continuous Release of Data Streams under both Centralized
+and Local Differential Privacy](https://dl.acm.org/doi/pdf/10.1145/3460120.3484750)
+
+Code available at [this repository](https://github.com/dp-cont/dp-cont).
 
 
 ### HDG
@@ -70,10 +83,24 @@ https://www.nist.gov/communications-technology-laboratory/pscr/funding-opportuni
 Related Paper: [CALM: Consistent Adaptive Local Marginal for Marginal Release under Local Differential Privacy](https://dl.acm.org/citation.cfm?id=3243742)
 
 
+
 ### MURS
 Shuffler Model
 
 Related Paper: [Improving Utility and Security of the Shuffler-based Differential Privacy](http://www.vldb.org/pvldb/vol13/p3545-wang.pdf)
+
+
+### DP-FL-GBDT
+Training GBDTs in the Federated Model
+
+Related Paper: [Federated Boosted Decision Trees with Differential Privacy](https://dl.acm.org/doi/abs/10.1145/3548606.3560687)
+Source code is open sourced at [Sam's repo](https://github.com/Samuel-Maddock/federated-boosted-dp-trees)
+
+### DP-VFL-Clustering
+Clustering in the Vertical Federated Model
+
+Related Paper: [Differentially Private Vertical Federated Clustering](https://arxiv.org/pdf/2208.01700.pdf) (accepted to VLDB 23)
+Source code is to be open sourced.
 
 
 ## Environment
