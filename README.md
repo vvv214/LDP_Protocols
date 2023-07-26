@@ -78,8 +78,7 @@ Related Paper: [Multi-Dimensional Analytics Related Paper: Answering Multi-Dimen
 ### CALM
 Marginal Estimation 
 
-The source code is not opened yet, but the similar code (plus a data synthesizing component) for the central DP setting is opened at [DPSyn](https://github.com/usnistgov/PrivacyEngCollabSpace/tree/master/tools/de-identification/Differential-Privacy-Synthetic-Data-Challenge-Algorithms/DPSyn) by [@Zhangzhk0819](https://github.com/Zhangzhk0819) (related info at [nist challenge 1](
-https://www.nist.gov/communications-technology-laboratory/pscr/funding-opportunities/open-innovation-prize-challenges-2) and [nist challenge 2](https://www.nist.gov/communications-technology-laboratory/pscr/funding-opportunities/open-innovation-prize-challenges-1)).
+The source code is not opened yet, but the similar code (plus a data synthesizing component) for the central DP setting is opened at [DPSyn](https://github.com/usnistgov/PrivacyEngCollabSpace/tree/master/tools/de-identification/Differential-Privacy-Synthetic-Data-Challenge-Algorithms/DPSyn) (related info at [nist challenge 1](https://www.nist.gov/ctl/pscr/open-innovation-prize-challenges/past-prize-challenges/2018-differential-privacy-synthetic)) and [DPSyn2](https://github.com/agl-c/deid2_dpsyn) (related info at [nist challenge 2](https://www.nist.gov/ctl/pscr/open-innovation-prize-challenges/past-prize-challenges/2020-differential-privacy-temporal)).
 
 Related Paper: [CALM: Consistent Adaptive Local Marginal for Marginal Release under Local Differential Privacy](https://dl.acm.org/citation.cfm?id=3243742)
 
